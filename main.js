@@ -132,6 +132,11 @@ chart.onAdd = function (mymap) {
 };
 chart.addTo(mymap);
 
+var setchart_width=screen.width*25/100;
+document.getElementById("chartpie").style.width = String(setchart_width)+"px";
+var setchart_height=screen.height*25/100;
+document.getElementById("chartpie").style.height = String(setchart_height)+"px";
+
 var myChart = echarts.init(document.getElementById('chartpie'));
 option = {
     title: {
@@ -141,7 +146,7 @@ option = {
     {
         name: '占比圖',
         type: 'pie',
-        radius: '80%',
+        radius: '70%',
         roseType: 'angle',
         data:[
             {value:num1, name:'一館'},
